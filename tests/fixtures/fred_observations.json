@@ -1,0 +1,22 @@
+{
+  "realtime_start": "2026-07-28",
+  "realtime_end": "2026-07-28",
+  "observation_start": "2026-05-01",
+  "observation_end": "2026-06-30",
+  "units": "lin",
+  "sort_order": "asc",
+  "observations": [
+    {
+      "realtime_start": "2026-07-28",
+      "realtime_end": "2026-07-28",
+      "date": "2026-05-01",
+      "value": "359.100"
+    },
+    {
+      "realtime_start": "2026-07-28",
+      "realtime_end": "2026-07-28",
+      "date": "2026-06-01",
+      "value": "."
+    }
+  ]
+}
