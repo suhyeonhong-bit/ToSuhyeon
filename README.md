@@ -74,3 +74,116 @@
 5. **[3. 참고자료.md](<./3. 참고자료.md>)를 보고 나만의 페이지를 만들어봅니다.** 노션이든 스프레드시트든 직접 만든 홈페이지든 자유입니다.
 
 막히면 언제든 물어보세요. 첫 단계부터 막혀도 괜찮습니다.
+
+## 직접 만드는 첫 데이터 수집기
+
+이 저장소에는 한국은행 기준금리와 미국 철강 생산자물가지수를 가져오는
+작은 Python 프로그램이 들어 있습니다.
+
+프로그램이 하는 일은 다음과 같습니다.
+
+1. ECOS에서 한국은행 기준금리를 가져옵니다.
+2. FRED에서 미국 철강 PPI(`WPU1017`)를 가져옵니다.
+3. 기관이 보낸 원본 JSON을 `data/raw`에 보관합니다.
+4. 두 지표를 월별로 합친 CSV를
+   `data/processed/monthly_indicators.csv`에 저장합니다.
+
+### 먼저 알아둘 용어
+
+- **GitHub**: 인터넷에 있는 프로젝트 보관함입니다.
+- **저장소(repository)**: 프로젝트 파일과 변경 기록을 함께 보관하는
+  공간입니다.
+- **commit**: 파일이 바뀐 상태를 하나의 기록으로 남기는 일입니다.
+- **fork**: 다른 사람의 공개 저장소를 내 GitHub 계정으로 복사하는
+  기능입니다.
+- **GitHub Actions**: GitHub가 정해진 명령을 대신 실행해주는 임시
+  컴퓨터입니다.
+
+이 프로젝트의 자동화 저장소는 공개 fork인
+`suhyeonhong-bit/ToSuhyeon`입니다. 원본 `yealu/ToSuhyeon`에는 자동
+수집 결과를 쓰지 않습니다.
+
+### 내 Mac에서 직접 실행하기
+
+VS Code에서 `/Users/suhyeonhong/Documents/GitHub/ToSuhyeon` 폴더를
+열고 터미널에서 다음 명령을 실행합니다.
+
+```bash
+python3 collect_data.py
+```
+
+실행하면 `[1/4]`부터 `[4/4]`까지 진행 상황이 보입니다. `완료:`가 나오면
+다음 파일을 확인합니다.
+
+- `data/raw/fred_WPU1017_날짜와시간.json`
+- `data/raw/ecos_base_rate_날짜와시간.json`
+- `data/processed/monthly_indicators.csv`
+
+JSON은 기관에서 받은 원본이고, CSV는 사람이 표로 보기 좋게 합친
+결과입니다. 발표가 아직 안 된 월은 오류가 아니라 빈칸으로 표시될 수
+있습니다.
+
+로컬 실행 전에 프로젝트의 `.env`에는 아래 이름의 두 키가 있어야 합니다.
+
+```text
+FRED_API_KEY=직접_발급받은_키
+ECOS_API_KEY=직접_발급받은_키
+```
+
+실제 키는 이 README, 코드, 채팅창에 입력하지 마세요. `.env`는 Git에서
+제외되어 있습니다.
+
+프로그램 검사는 다음 명령으로 실행합니다.
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+마지막에 `OK`가 나오면 자동 검사에 통과한 것입니다.
+
+내 Mac에서 프로그램을 실행해 생긴 데이터는 자동으로 GitHub에 올라가지 않습니다.
+GitHub에 보내려면 별도의 commit과 push가 필요합니다.
+
+### GitHub에서 매주 자동 실행하기
+
+GitHub Actions는 매주 월요일 오전 11시 한국 시간에 같은 프로그램을
+실행합니다. GitHub 서버 사정에 따라 시작이 몇 분 늦을 수 있습니다.
+
+GitHub는 내 Mac의 `.env`를 볼 수 없으므로 수현님 저장소에 두 개의
+Actions secrets를 한 번 등록해야 합니다.
+
+1. GitHub에서 `suhyeonhong-bit/ToSuhyeon` 저장소를 엽니다.
+2. `Settings`를 누릅니다.
+3. `Secrets and variables` → `Actions`로 이동합니다.
+4. `New repository secret`을 눌러 `FRED_API_KEY`를 등록합니다.
+5. 다시 `New repository secret`을 눌러 `ECOS_API_KEY`를 등록합니다.
+
+키 값은 GitHub 입력란에 직접 붙여넣고 채팅창에는 보내지 마세요. 저장된
+secret 값은 다시 화면에 표시되지 않습니다.
+
+처음에는 예약 시간을 기다리지 않고 직접 시험합니다.
+
+1. 저장소 위쪽의 `Actions`를 누릅니다.
+2. fork의 워크플로 활성화 안내가 보이면 내용을 확인하고 활성화 버튼을
+   누릅니다.
+3. 왼쪽에서 `Collect weekly economic data`를 선택합니다.
+4. `Run workflow` → 초록색 `Run workflow`를 누릅니다.
+5. 실행 기록의 표시가 초록색 체크가 될 때까지 기다립니다.
+
+성공하면 새 원본 JSON 두 개와 최신 CSV가 자동 commit됩니다. 실패하면
+빨간색 `X`가 표시되고 이전 데이터는 그대로 유지됩니다.
+
+공개 저장소에서 오랫동안 아무 활동도 없으면 GitHub가 예약 워크플로를
+비활성화할 수 있습니다. 정상적인 주간 데이터 commit이 계속되면 활동도
+이어집니다. 실패가 장기간 계속되면 `Actions` 화면에서 워크플로가
+활성화되어 있는지 확인합니다.
+
+### 자주 만나는 오류
+
+- `FRED_API_KEY` 또는 `ECOS_API_KEY` 오류: 키 이름과 저장 위치를
+  확인합니다. 키 값은 채팅에 보내지 않습니다.
+- 연결 오류: 인터넷 연결을 확인하고 다시 실행합니다.
+- GitHub Actions 실패: 실패한 실행을 눌러 어느 단계에 빨간 표시가
+  있는지 확인합니다.
+- 최신 월이 빈칸: 기관의 발표 시차일 수 있으므로 다음 실행에서 다시
+  확인합니다.
