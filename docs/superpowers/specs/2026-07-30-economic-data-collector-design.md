@@ -1,10 +1,14 @@
-# ECOS·FRED 월별 데이터 수집기 설계
+# ECOS·FRED 월별 데이터 수집기와 GitHub 자동화 설계
 
 ## 1. 목적
 
 터미널에서 명령 한 번으로 최근 5년의 한국은행 기준금리와 미국 철강
 생산자물가지수를 수집한다. API가 반환한 원본 JSON을 보존하고, 두 지표를
 월 기준으로 결합한 CSV를 만든다.
+
+같은 프로그램을 GitHub Actions에서도 매주 월요일 오전 11시
+`Asia/Seoul` 기준으로 실행한다. 실행할 때마다 새 원본 JSON을 추가하고
+최신 CSV를 수현님 공개 저장소에 자동 커밋한다.
 
 이 프로젝트의 첫 번째 성공 기준은 사용자가 다음 명령을 직접 실행하고,
 생성된 원본과 월별 표의 위치를 설명할 수 있는 것이다.
@@ -22,6 +26,9 @@ python3 collect_data.py
 - 작업 경로는 `/Users/suhyeonhong/Documents/GitHub/ToSuhyeon`이다.
 - 지원 기준은 macOS에 설치된 Python 3.9.6 이상이다.
 - Python 표준 라이브러리만 사용하며 외부 패키지를 설치하지 않는다.
+- GitHub 연결 계정은 `suhyeonhong-bit`이다.
+- 자동화 대상은 원본 저장소를 fork해 만드는 공개 저장소
+  `suhyeonhong-bit/ToSuhyeon`이다.
 
 ## 3. 범위
 
@@ -35,15 +42,19 @@ python3 collect_data.py
 - 두 지표를 `YYYY-MM` 기준으로 결합한 CSV 생성
 - 설정, 응답 파싱, 월별 결합, 오류 처리를 자동 테스트
 - 초보자용 실행 및 결과 확인 방법을 README에 추가
+- GitHub Actions에서 매주 월요일 오전 11시 `Asia/Seoul` 기준으로 실행
+- GitHub 화면에서 수동으로 실행할 수 있는 `workflow_dispatch` 제공
+- 자동 테스트 통과 후 생성 데이터만 GitHub에 자동 커밋
 
 ### 제외
 
-- 스케줄러를 이용한 자동 실행
 - 노션 또는 Google Sheets 연동
 - 그래프와 대시보드
 - 상관관계 분석이나 투자 판단
 - 5년을 초과하는 기간 선택 기능
 - 명령행 옵션과 설정 화면
+- 원본 `yealu/ToSuhyeon` 저장소 변경
+- GitHub Actions가 코드나 문서를 자동 수정하는 기능
 
 ## 4. 데이터 정의
 
@@ -98,6 +109,9 @@ ToSuhyeon/
 ├── .env
 ├── .gitignore
 ├── collect_data.py
+├── .github/
+│   └── workflows/
+│       └── collect-weekly.yml
 ├── collector/
 │   ├── __init__.py
 │   ├── config.py
@@ -126,6 +140,8 @@ ToSuhyeon/
 
 - `collect_data.py`: 사용자가 실행하는 진입점이다. 각 단계를 순서대로
   호출하고 진행 상황과 최종 경로를 출력한다.
+- `.github/workflows/collect-weekly.yml`: 예약·수동 실행, 테스트, 데이터
+  수집, 생성 데이터 커밋 순서를 정의한다.
 - `collector/config.py`: `.env`를 읽고 두 필수 키가 존재하는지 검사한다.
 - `collector/dates.py`: 실행일을 기준으로 5년 수집 범위를 계산한다.
 - `collector/fred.py`: FRED 요청을 만들고 응답에서 월별 값을 추출한다.
@@ -195,19 +211,26 @@ month,korea_base_rate_percent,us_steel_ppi_index
 - 결측값은 빈 문자열로 쓴다.
 - 새 CSV가 완전히 작성된 경우에만 기존 CSV를 교체한다.
 
-생성 데이터는 로컬 실행 결과이므로 `.gitignore`에
-`data/raw/*.json`과 `data/processed/*.csv`를 추가한다. 폴더 구조를
-유지하는 `.gitkeep`만 Git에서 관리한다.
+생성 데이터는 GitHub 자동화가 저장소에 축적해야 하므로 Git에서 제외하지
+않는다. 로컬에서 수동 실행하면 `git status`에 새 원본과 변경된 CSV가
+나타날 수 있으며, README에서 이것이 정상임을 설명한다. `.env`,
+`__pycache__/`, `*.pyc`만 `.gitignore`로 제외한다.
 
 ## 8. 보안
 
 - `.env`는 계속 Git에서 제외한다.
+- GitHub에서는 저장소의 Actions secrets에 `FRED_API_KEY`와
+  `ECOS_API_KEY`를 별도로 등록한다.
 - 키 값을 코드, 테스트, fixture, README에 기록하지 않는다.
 - 키 값이나 키가 포함된 URL을 출력하거나 예외 메시지에 포함하지 않는다.
 - HTTP 오류를 사용자에게 보여줄 때 원본 예외 문자열 대신 기관명,
   상태 코드, 안전한 한국어 설명만 사용한다.
 - 네트워크 모듈은 키를 저장 모듈이나 변환 모듈에 전달하지 않는다.
 - 원본 응답에 현재 키 문자열이 포함된 경우 저장을 거부한다.
+- GitHub 워크플로는 `contents: write`만 요청하고 다른 권한은 요청하지
+  않는다.
+- 예약 및 수동 실행에만 secrets를 사용하며 pull request 실행 조건은
+  추가하지 않는다.
 
 ## 9. 오류 처리
 
@@ -227,6 +250,11 @@ month,korea_base_rate_percent,us_steel_ppi_index
 
 FRED가 성공하고 ECOS가 실패한 경우 이미 받은 FRED 원본은 남길 수 있지만,
 최종 CSV는 교체하지 않는다.
+
+GitHub Actions에서 테스트나 수집이 실패하면 커밋 단계를 실행하지 않는다.
+이전 데이터는 그대로 유지되고 해당 실행은 GitHub Actions 화면에서 실패로
+표시된다. 같은 워크플로 실행이 겹치지 않도록 하나의 concurrency group을
+사용한다.
 
 ## 10. 테스트
 
@@ -261,7 +289,91 @@ python3 -m unittest discover -s tests -v
 - CSV에 최근 5년 범위의 월별 행이 있다.
 - 키 값이 터미널 출력, 생성 파일, `git status`에 나타나지 않는다.
 
-## 11. 문서화
+## 11. GitHub Actions 자동화
+
+### 저장소 준비
+
+1. 원본 `yealu/ToSuhyeon`을 `suhyeonhong-bit/ToSuhyeon`으로 fork한다.
+2. 로컬 저장소의 `origin`을 수현님 fork로 변경한다.
+3. 원본 주소는 `upstream` 원격으로 등록해 출처를 보존한다.
+4. 로컬 커밋을 수현님 fork의 기본 브랜치 `main`으로 push한다.
+5. 수현님 fork의 Actions secrets에 두 API 키를 사용자가 직접 입력한다.
+
+키 값은 에이전트 대화창이나 명령 인자에 입력하지 않는다. GitHub 웹 화면의
+secret 입력란에 사용자가 직접 붙여넣는다.
+
+### 실행 조건
+
+워크플로는 다음 두 조건으로 실행한다.
+
+```yaml
+on:
+  schedule:
+    - cron: "0 11 * * 1"
+      timezone: "Asia/Seoul"
+  workflow_dispatch:
+```
+
+- 예약 목표는 매주 월요일 오전 11시 한국 시간이다.
+- GitHub 서버 부하에 따라 실제 시작은 몇 분 늦어질 수 있다.
+- `workflow_dispatch`는 예약 시간을 기다리지 않고 검증할 수 있는 수동
+  실행 버튼을 만든다.
+- 예약 실행은 GitHub 기본 브랜치의 최신 커밋을 사용한다.
+
+### 작업 순서와 권한
+
+워크플로는 다음 순서로 동작한다.
+
+1. `ubuntu-latest` 임시 실행 환경을 준비한다.
+2. 수현님 fork의 기본 브랜치를 checkout한다.
+3. Python 3.9를 준비한다.
+4. `python3 -m unittest discover -s tests -v`를 실행한다.
+5. Actions secrets를 환경 변수로 전달하고 `python3 collect_data.py`를
+   실행한다.
+6. `data/raw`와 `data/processed` 변경만 stage한다.
+7. 변경이 있으면 GitHub Actions 봇 이름으로 커밋하고 `main`에 push한다.
+8. 변경이 없으면 성공으로 끝내고 빈 커밋을 만들지 않는다.
+
+워크플로는 다음 최소 권한만 사용한다.
+
+```yaml
+permissions:
+  contents: write
+```
+
+GitHub가 실행마다 제공하는 저장소 범위의 `GITHUB_TOKEN`으로 push한다.
+개인 액세스 토큰은 만들지 않는다. 자동화가 만든 push가 같은 워크플로를
+다시 실행하게 하는 `push` 트리거도 추가하지 않는다.
+
+### 자동 커밋
+
+- 커밋 메시지: `data: collect weekly indicators YYYY-MM-DD`
+- 커밋 대상: `data/raw/*.json`, `data/processed/monthly_indicators.csv`
+- 커밋 제외: 코드, 문서, `.env`, 기타 사용자 파일
+- 원본 JSON은 실행할 때마다 추가한다.
+- 최종 CSV는 최신 5년 데이터로 교체한다.
+- 공개 저장소이므로 커밋된 JSON과 CSV는 누구나 볼 수 있다.
+
+### 첫 실행 검증과 운영상 예외
+
+설정 직후 `Run workflow`로 한 번 실행해 다음을 확인한다.
+
+- 테스트 단계 성공
+- FRED와 ECOS 요청 성공
+- secrets가 로그에 노출되지 않음
+- 원본 JSON 두 개와 CSV 한 개 생성
+- 데이터 파일만 포함한 자동 커밋 생성
+
+ECOS가 GitHub 클라우드 실행 환경의 요청을 제한하면 워크플로는 데이터를
+커밋하지 않고 실패한다. 실제 오류를 확인한 뒤 로컬 Mac 예약 실행으로
+전환하거나 ECOS만 다른 허용 환경에서 실행하는 새 설계를 별도로 승인받는다.
+
+공개 저장소의 예약 워크플로는 장기간 저장소 활동이 없으면 GitHub 정책에
+따라 비활성화될 수 있다. 정상적인 주간 자동 커밋이 계속되면 저장소 활동도
+이어진다. 실패가 장기간 지속되면 Actions 화면에서 워크플로 상태를
+확인한다.
+
+## 12. 문서화
 
 README에 다음 내용을 초보자 관점으로 추가한다.
 
@@ -273,9 +385,17 @@ README에 다음 내용을 초보자 관점으로 추가한다.
 - JSON 원본과 CSV 결과를 여는 방법
 - 발표 시차와 빈칸의 의미
 - 키 오류, 인터넷 오류, API 오류에 대한 대응
-- 자동으로 GitHub에 업로드되거나 자동 실행되지 않는다는 설명
+- GitHub, fork, commit, Actions를 설명하는 초보자용 용어 안내
+- 로컬 `.env`와 GitHub Actions secrets의 차이
+- 수현님 fork 생성과 원격 저장소 연결 방법
+- Actions secrets 등록 방법
+- `Run workflow` 수동 검증 방법
+- 예약 실행 시각과 지연 가능성
+- 자동 커밋되는 파일과 공개 범위
+- 실패한 자동 실행을 GitHub 화면에서 확인하는 방법
+- 로컬 수동 실행은 자동으로 GitHub에 업로드되지 않는다는 설명
 
-## 12. 완료 기준
+## 13. 완료 기준
 
 - Python 3.9.6에서 외부 패키지 없이 실행된다.
 - 모든 자동 테스트가 통과한다.
@@ -283,3 +403,9 @@ README에 다음 내용을 초보자 관점으로 추가한다.
 - 최근 5년의 원본 JSON 두 개와 월별 CSV가 생성된다.
 - API 키가 코드, 문서, 테스트, 출력, 생성 데이터, Git 추적 파일에 없다.
 - 사용자가 실행 명령과 결과 파일의 의미를 README만 보고 이해할 수 있다.
+- `suhyeonhong-bit/ToSuhyeon` 공개 fork의 기본 브랜치에 코드와
+  워크플로가 있다.
+- GitHub Actions secrets 두 개가 사용자에 의해 등록되어 있다.
+- `Run workflow` 수동 실행에서 테스트, 수집, 자동 커밋이 성공한다.
+- 예약 설정이 매주 월요일 오전 11시 `Asia/Seoul`을 사용한다.
+- 자동 커밋에는 `data/raw`와 `data/processed` 파일만 포함된다.
