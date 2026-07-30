@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
 
 permissions:
-  actions: write
   contents: write
 
 jobs:
@@ -12,13 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Restore exact tracked tree
+      - name: Restore code and data layout
         shell: bash
         run: |
           set -euo pipefail
           base64 --decode repository.tar.gz.b64 > /tmp/repository.tar.gz
-          git ls-files -z | xargs -0 rm -f
-          tar -xzf /tmp/repository.tar.gz
+          mkdir -p /tmp/repository
+          tar -xzf /tmp/repository.tar.gz -C /tmp/repository
+          git ls-files -z | while IFS= read -r -d '' file; do
+            case "$file" in
+              .github/*) ;;
+              *) rm -f -- "$file" ;;
+            esac
+          done
+          rsync -a --exclude '.github/' /tmp/repository/ ./
           git add -A
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
