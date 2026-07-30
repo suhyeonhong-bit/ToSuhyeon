@@ -103,6 +103,36 @@
 `suhyeonhong-bit/ToSuhyeon`입니다. 원본 `yealu/ToSuhyeon`에는 자동
 수집 결과를 쓰지 않습니다.
 
+### API에 어떤 정보가 전달되나요?
+
+이 프로그램은 FRED 또는 ECOS에 HTTPS API 요청을 보낼 때 API 키와 함께
+가져올 데이터의 series/table/item 식별자, 그리고 요청한 날짜 범위를
+보냅니다. 이는 기관이 어떤 데이터와 기간을 돌려줄지 알기 위해 필요한
+정보입니다. API 키는 출입증이므로 다른 사람에게 보내거나 공개 파일에
+적지 마세요.
+
+### 내 공개 fork 만들기와 연결하기
+
+GitHub에서 원본 `yealu/ToSuhyeon` 페이지를 열고 오른쪽 위 `Fork`를 눌러
+내 계정에 개인 공개 fork를 만듭니다. 이미 내 컴퓨터에 저장소를 받았다면
+아래 명령으로 `origin`은 내 fork로 바꾸고, 원본은 `upstream`으로 남겨
+둡니다.
+
+```bash
+git remote set-url origin https://github.com/suhyeonhong-bit/ToSuhyeon.git
+git remote add upstream https://github.com/yealu/ToSuhyeon.git
+```
+
+그다음 `git remote -v`를 실행해 `origin`과 `upstream` 주소가 모두 맞는지
+확인합니다. `origin`으로는 내 결과를 보내고, `upstream`은 원본 변경을
+확인할 때 사용합니다.
+
+### 공개 데이터 파일에는 비밀을 넣지 마세요
+
+이 공개 저장소에 commit한 원본 JSON과 처리된 CSV는 누구나 읽을 수 있습니다.
+따라서 파일 안에는 API 키 같은 비밀이나 개인정보를 절대
+넣지 마세요. 공개해도 되는 기관 데이터만 저장합니다.
+
 ### 내 Mac에서 직접 실행하기
 
 VS Code에서 `/Users/suhyeonhong/Documents/GitHub/ToSuhyeon` 폴더를

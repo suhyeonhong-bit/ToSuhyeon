@@ -93,11 +93,15 @@ def parse_fred(
             values[month] = None
             continue
         try:
-            Decimal(raw_value)
+            value = Decimal(raw_value)
         except InvalidOperation:
             raise CollectorError(
                 f"수집 실패: FRED {month} 값이 숫자가 아닙니다."
             ) from None
+        if not value.is_finite():
+            raise CollectorError(
+                f"수집 실패: FRED {month} 값이 숫자가 아닙니다."
+            )
         values[month] = raw_value
 
     if not values or not any(value is not None for value in values.values()):

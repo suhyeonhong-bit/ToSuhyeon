@@ -97,6 +97,22 @@ class EcosTests(unittest.TestCase):
         with self.assertRaisesRegex(CollectorError, "항목"):
             parse_ecos(payload)
 
+    def test_non_finite_numeric_values_are_rejected_safely(self):
+        key = "ecos-key-that-must-not-appear"
+        for raw_value in ("NaN", "Infinity", "-Infinity"):
+            with self.subTest(raw_value=raw_value):
+                payload = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))
+                payload["api_key"] = key
+                payload["StatisticSearch"]["row"][0]["DATA_VALUE"] = raw_value
+
+                with self.assertRaises(CollectorError) as raised:
+                    parse_ecos(payload)
+
+                message = str(raised.exception)
+                self.assertIn("숫자", message)
+                self.assertNotIn(raw_value, message)
+                self.assertNotIn(key, message)
+
 
 if __name__ == "__main__":
     unittest.main()

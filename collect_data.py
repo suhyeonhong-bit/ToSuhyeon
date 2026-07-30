@@ -2,6 +2,7 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Optional
+from zoneinfo import ZoneInfo
 
 from collector.config import load_config
 from collector.dates import calculate_collection_range
@@ -20,11 +21,15 @@ def run(
     config = load_config(project_root / ".env")
     print("[1/4] API 키를 확인했습니다.")
 
-    collection_date = date.today() if today is None else today
-    date_range = calculate_collection_range(collection_date)
     run_moment = datetime.now(timezone.utc) if now is None else now
     if run_moment.tzinfo is None:
         run_moment = run_moment.replace(tzinfo=timezone.utc)
+    collection_date = (
+        run_moment.astimezone(ZoneInfo("Asia/Seoul")).date()
+        if today is None
+        else today
+    )
+    date_range = calculate_collection_range(collection_date)
     run_id = run_moment.astimezone(timezone.utc).strftime(
         "%Y%m%dT%H%M%SZ"
     )

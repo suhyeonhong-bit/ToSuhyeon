@@ -128,6 +128,54 @@ class CollectDataTests(unittest.TestCase):
         self.assertEqual(exit_code, 1)
         self.assertEqual(error_output.getvalue(), "수집 실패: 안전한 오류\n")
 
+    def test_default_collection_date_uses_korean_calendar_month(self):
+        project_root = Path("/tmp/tosuhyeon-test")
+        korean_month_start = datetime(
+            2026,
+            7,
+            31,
+            15,
+            30,
+            tzinfo=timezone.utc,
+        )
+
+        with ExitStack() as stack:
+            stack.enter_context(
+                patch(
+                    "collect_data.load_config",
+                    return_value=Config("fred-secret", "ecos-secret"),
+                )
+            )
+            fetch_fred = stack.enter_context(
+                patch(
+                    "collect_data.fetch_fred",
+                    return_value=({"observations": []}, "{}"),
+                )
+            )
+            stack.enter_context(patch("collect_data.parse_fred", return_value={}))
+            stack.enter_context(
+                patch(
+                    "collect_data.fetch_ecos",
+                    return_value=({"StatisticSearch": {"row": []}}, "{}"),
+                )
+            )
+            stack.enter_context(patch("collect_data.parse_ecos", return_value={}))
+            stack.enter_context(patch("collect_data.merge_monthly", return_value=[]))
+            stack.enter_context(patch("collect_data.save_raw_response"))
+            stack.enter_context(patch("collect_data.save_csv"))
+
+            collect_data.run(project_root, now=korean_month_start)
+
+        self.assertEqual(
+            fetch_fred.call_args.args[1],
+            CollectionRange(
+                start_month="202108",
+                end_month="202608",
+                start_date="2021-08-01",
+                end_date="2026-08-01",
+            ),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

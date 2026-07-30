@@ -107,6 +107,28 @@ class FredTests(unittest.TestCase):
         with self.assertRaisesRegex(CollectorError, "숫자"):
             parse_fred(payload)
 
+    def test_non_finite_numeric_values_are_rejected_safely(self):
+        key = "fred-key-that-must-not-appear"
+        for raw_value in ("NaN", "Infinity", "-Infinity"):
+            with self.subTest(raw_value=raw_value):
+                payload = {
+                    "api_key": key,
+                    "observations": [
+                        {
+                            "date": "2026-06-01",
+                            "value": raw_value,
+                        }
+                    ]
+                }
+
+                with self.assertRaises(CollectorError) as raised:
+                    parse_fred(payload)
+
+                message = str(raised.exception)
+                self.assertIn("숫자", message)
+                self.assertNotIn(raw_value, message)
+                self.assertNotIn(key, message)
+
 
 if __name__ == "__main__":
     unittest.main()
