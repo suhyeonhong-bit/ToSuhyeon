@@ -17,10 +17,11 @@ def fetch_fred(
     api_key: str,
     date_range: CollectionRange,
     opener: Callable = urlopen,
+    series_id: str = "WPU1017",
 ) -> Tuple[Dict[str, object], str]:
     query = urlencode(
         {
-            "series_id": "WPU1017",
+            "series_id": series_id,
             "file_type": "json",
             "observation_start": date_range.start_date,
             "observation_end": date_range.end_date,

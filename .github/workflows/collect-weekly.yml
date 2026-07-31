@@ -1,8 +1,8 @@
-name: Collect weekly economic data
+name: Collect monthly economic data
 
 on:
   schedule:
-    - cron: "0 11 * * 1"
+    - cron: "30 0 1 * *"
       timezone: "Asia/Seoul"
   workflow_dispatch:
 
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: weekly-economic-data
+  group: monthly-economic-data
   cancel-in-progress: false
 
 jobs:
@@ -49,5 +49,5 @@ jobs:
             echo "No generated data changed."
             exit 0
           fi
-          git commit -m "data: collect weekly indicators $(date -u +'%Y-%m-%d')"
+          git commit -m "data: collect monthly indicators $(date -u +'%Y-%m-%d')"
           git push origin HEAD:main

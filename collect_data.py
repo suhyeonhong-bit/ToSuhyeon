@@ -10,7 +10,7 @@ from collector.ecos import fetch_ecos, parse_ecos
 from collector.errors import CollectorError
 from collector.fred import fetch_fred, parse_fred
 from collector.storage import save_csv, save_raw_response
-from collector.transform import merge_monthly
+from collector.transform import calculate_target_rate, merge_monthly
 
 
 def run(
@@ -19,7 +19,7 @@ def run(
     now: Optional[datetime] = None,
 ) -> int:
     config = load_config(project_root / ".env")
-    print("[1/4] API 키를 확인했습니다.")
+    print("[1/6] API 키를 확인했습니다.")
 
     run_moment = datetime.now(timezone.utc) if now is None else now
     if run_moment.tzinfo is None:
@@ -39,16 +39,48 @@ def run(
     fred_payload, fred_raw = fetch_fred(
         config.fred_api_key,
         date_range,
+        series_id="WPU1017",
     )
     fred_values = parse_fred(fred_payload)
     save_raw_response(
         raw_dir=raw_dir,
-        source="fred",
+        source="fred_steel_ppi",
         raw_text=fred_raw,
         secrets=secrets,
         run_id=run_id,
     )
-    print(f"[2/4] FRED 철강 PPI {len(fred_values)}건을 수집했습니다.")
+    print(f"[2/6] FRED 철강 PPI {len(fred_values)}건을 수집했습니다.")
+
+    fed_upper_payload, fed_upper_raw = fetch_fred(
+        config.fred_api_key,
+        date_range,
+        series_id="DFEDTARU",
+    )
+    fed_upper_values = parse_fred(fed_upper_payload)
+    save_raw_response(
+        raw_dir=raw_dir,
+        source="fred_fed_target_upper",
+        raw_text=fed_upper_raw,
+        secrets=secrets,
+        run_id=run_id,
+    )
+    print(f"[3/6] FRED 연준 목표금리 상단 {len(fed_upper_values)}건을 수집했습니다.")
+
+    fed_lower_payload, fed_lower_raw = fetch_fred(
+        config.fred_api_key,
+        date_range,
+        series_id="DFEDTARL",
+    )
+    fed_lower_values = parse_fred(fed_lower_payload)
+    save_raw_response(
+        raw_dir=raw_dir,
+        source="fred_fed_target_lower",
+        raw_text=fed_lower_raw,
+        secrets=secrets,
+        run_id=run_id,
+    )
+    fed_target_values = calculate_target_rate(fed_upper_values, fed_lower_values)
+    print(f"[4/6] FRED 연준 목표금리 하단 {len(fed_lower_values)}건을 수집했습니다.")
 
     ecos_payload, ecos_raw = fetch_ecos(
         config.ecos_api_key,
@@ -62,14 +94,14 @@ def run(
         secrets=secrets,
         run_id=run_id,
     )
-    print(f"[3/4] ECOS 기준금리 {len(ecos_values)}건을 수집했습니다.")
+    print(f"[5/6] ECOS 기준금리 {len(ecos_values)}건을 수집했습니다.")
 
-    rows = merge_monthly(ecos_values, fred_values)
+    rows = merge_monthly(ecos_values, fred_values, fed_target_values)
     output_path = save_csv(
         project_root / "data" / "processed" / "monthly_indicators.csv",
         rows,
     )
-    print(f"[4/4] 월별 CSV {len(rows)}행을 저장했습니다.")
+    print(f"[6/6] 월별 CSV {len(rows)}행을 저장했습니다.")
     print(f"완료: {output_path.relative_to(project_root)}")
     return 0
 

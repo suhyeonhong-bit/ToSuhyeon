@@ -16,7 +16,7 @@ class ReadmeContractTests(unittest.TestCase):
             "FRED_API_KEY",
             "ECOS_API_KEY",
             "suhyeonhong-bit/ToSuhyeon",
-            "매주 월요일 오전 11시",
+            "매월 1일 오전 9시 30분",
             "Run workflow",
             "Actions secrets",
             "자동으로 GitHub에 올라가지 않습니다",

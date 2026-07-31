@@ -12,9 +12,13 @@ CSV_FIELDS = (
     "month",
     "korea_base_rate_percent",
     "us_steel_ppi_index",
+    "us_fed_target_rate_percent",
 )
 RAW_PREFIXES = {
     "fred": "fred_WPU1017",
+    "fred_steel_ppi": "fred_WPU1017",
+    "fred_fed_target_upper": "fred_DFEDTARU",
+    "fred_fed_target_lower": "fred_DFEDTARL",
     "ecos": "ecos_base_rate",
 }
 

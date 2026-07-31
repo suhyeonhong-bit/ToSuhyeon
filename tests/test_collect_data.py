@@ -12,7 +12,7 @@ from collector.errors import CollectorError
 
 
 class CollectDataTests(unittest.TestCase):
-    def test_run_orchestrates_both_sources_and_saves_outputs(self):
+    def test_run_orchestrates_sources_and_saves_outputs(self):
         project_root = Path("/tmp/tosuhyeon-test")
         date_range = CollectionRange(
             start_month="202107",
@@ -29,6 +29,7 @@ class CollectDataTests(unittest.TestCase):
                 "month": "2026-06",
                 "korea_base_rate_percent": "2.5",
                 "us_steel_ppi_index": "361.439",
+                "us_fed_target_rate_percent": "4.125",
             }
         ]
 
@@ -45,16 +46,30 @@ class CollectDataTests(unittest.TestCase):
                     return_value=date_range,
                 )
             )
-            stack.enter_context(
+            fetch_fred = stack.enter_context(
                 patch(
                     "collect_data.fetch_fred",
-                    return_value=(fred_payload, '{"observations": []}'),
+                    side_effect=[
+                        (fred_payload, '{"observations": []}'),
+                        (fred_payload, '{"observations": []}'),
+                        (fred_payload, '{"observations": []}'),
+                    ],
                 )
             )
             stack.enter_context(
                 patch(
                     "collect_data.parse_fred",
-                    return_value=fred_values,
+                    side_effect=[
+                        fred_values,
+                        {"2026-06": "4.25"},
+                        {"2026-06": "4.00"},
+                    ],
+                )
+            )
+            stack.enter_context(
+                patch(
+                    "collect_data.calculate_target_rate",
+                    return_value={"2026-06": "4.125"},
                 )
             )
             stack.enter_context(
@@ -82,7 +97,9 @@ class CollectDataTests(unittest.TestCase):
                 patch(
                     "collect_data.save_raw_response",
                     side_effect=[
-                        project_root / "data/raw/fred.json",
+                        project_root / "data/raw/fred_steel.json",
+                        project_root / "data/raw/fred_upper.json",
+                        project_root / "data/raw/fred_lower.json",
                         project_root / "data/raw/ecos.json",
                     ],
                 )
@@ -103,13 +120,14 @@ class CollectDataTests(unittest.TestCase):
                 )
 
         self.assertEqual(exit_code, 0)
-        self.assertEqual(save_raw.call_count, 2)
+        self.assertEqual(fetch_fred.call_count, 3)
+        self.assertEqual(save_raw.call_count, 4)
         save_csv.assert_called_once_with(
             project_root / "data/processed/monthly_indicators.csv",
             merged_rows,
         )
         text = output.getvalue()
-        self.assertIn("[1/4]", text)
+        self.assertIn("[1/6]", text)
         self.assertIn("FRED 철강 PPI 1건", text)
         self.assertIn("ECOS 기준금리 1건", text)
         self.assertIn("monthly_indicators.csv", text)
@@ -149,10 +167,16 @@ class CollectDataTests(unittest.TestCase):
             fetch_fred = stack.enter_context(
                 patch(
                     "collect_data.fetch_fred",
-                    return_value=({"observations": []}, "{}"),
+                    side_effect=[
+                        ({"observations": []}, "{}"),
+                        ({"observations": []}, "{}"),
+                        ({"observations": []}, "{}"),
+                    ],
                 )
             )
-            stack.enter_context(patch("collect_data.parse_fred", return_value={}))
+            stack.enter_context(
+                patch("collect_data.parse_fred", return_value={"2026-06": "1"})
+            )
             stack.enter_context(
                 patch(
                     "collect_data.fetch_ecos",

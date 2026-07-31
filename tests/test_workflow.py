@@ -14,7 +14,7 @@ class WorkflowContractTests(unittest.TestCase):
     def test_workflow_has_schedule_secrets_and_minimal_commit_scope(self):
         text = WORKFLOW_PATH.read_text(encoding="utf-8")
 
-        self.assertIn('cron: "0 11 * * 1"', text)
+        self.assertIn('cron: "30 0 1 * *"', text)
         self.assertIn('timezone: "Asia/Seoul"', text)
         self.assertIn("workflow_dispatch:", text)
         self.assertIn("contents: write", text)

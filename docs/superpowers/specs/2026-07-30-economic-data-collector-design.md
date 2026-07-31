@@ -2,11 +2,11 @@
 
 ## 1. 목적
 
-터미널에서 명령 한 번으로 최근 5년의 한국은행 기준금리와 미국 철강
-생산자물가지수를 수집한다. API가 반환한 원본 JSON을 보존하고, 두 지표를
+터미널에서 명령 한 번으로 최근 5년의 한국은행 기준금리, 미국 철강
+생산자물가지수, 연준 목표금리 범위 중간값을 수집한다. API가 반환한 원본 JSON을 보존하고, 지표를
 월 기준으로 결합한 CSV를 만든다.
 
-같은 프로그램을 GitHub Actions에서도 매주 월요일 오전 11시
+같은 프로그램을 GitHub Actions에서도 매월 1일 오전 9시 30분
 `Asia/Seoul` 기준으로 실행한다. 실행할 때마다 새 원본 JSON을 추가하고
 최신 CSV를 수현님 공개 저장소에 자동 커밋한다.
 
@@ -37,12 +37,13 @@ python3 collect_data.py
 - `.env`에서 `FRED_API_KEY`와 `ECOS_API_KEY` 읽기
 - 실행 월에서 5년 전 같은 월부터 실행 월까지의 월별 데이터 요청
 - FRED `WPU1017` 미국 철강 생산자물가지수 수집
+- FRED `DFEDTARU`·`DFEDTARL` 연준 목표금리 상단·하단 수집 및 월별 중간값 계산
 - ECOS `722Y001` 통계표의 `0101000` 한국은행 기준금리 수집
 - 성공적으로 받은 API 응답을 원본 JSON으로 별도 보관
-- 두 지표를 `YYYY-MM` 기준으로 결합한 CSV 생성
+- 네 지표를 `YYYY-MM` 기준으로 결합한 CSV 생성
 - 설정, 응답 파싱, 월별 결합, 오류 처리를 자동 테스트
 - 초보자용 실행 및 결과 확인 방법을 README에 추가
-- GitHub Actions에서 매주 월요일 오전 11시 `Asia/Seoul` 기준으로 실행
+- GitHub Actions에서 매월 1일 오전 9시 30분 `Asia/Seoul` 기준으로 실행
 - GitHub 화면에서 수동으로 실행할 수 있는 `workflow_dispatch` 제공
 - 자동 테스트 통과 후 생성 데이터만 GitHub에 자동 커밋
 
@@ -94,6 +95,12 @@ python3 collect_data.py
 https://ecos.bok.or.kr/api/StatisticSearch/<ECOS_API_KEY>/json/kr/1/1000/722Y001/M/YYYYMM/YYYYMM/0101000
 ```
 
+### FRED 연준 목표금리
+
+- 시리즈 ID: `DFEDTARU`(상단), `DFEDTARL`(하단)
+- 두 시리즈가 모두 존재하는 월만 `(DFEDTARU + DFEDTARL) / 2`로 계산한다.
+- 결과 컬럼은 `us_fed_target_rate_percent`이며 결측 월은 빈칸으로 둔다.
+
 ### 기간 계산
 
 - 시작 월은 실행 시점의 달에서 정확히 5년 전 같은 달이다.
@@ -140,7 +147,7 @@ ToSuhyeon/
 
 - `collect_data.py`: 사용자가 실행하는 진입점이다. 각 단계를 순서대로
   호출하고 진행 상황과 최종 경로를 출력한다.
-- `.github/workflows/collect-weekly.yml`: 예약·수동 실행, 테스트, 데이터
+- `.github/workflows/collect-weekly.yml`: 월별 예약·수동 실행, 테스트, 데이터
   수집, 생성 데이터 커밋 순서를 정의한다.
 - `collector/config.py`: `.env`를 읽고 두 필수 키가 존재하는지 검사한다.
 - `collector/dates.py`: 실행일을 기준으로 5년 수집 범위를 계산한다.
@@ -160,22 +167,25 @@ ToSuhyeon/
 1. `collect_data.py`가 프로젝트 루트의 `.env`를 찾는다.
 2. 두 키의 존재와 비어 있지 않은 값을 확인한다.
 3. 현재 날짜를 기준으로 시작 월과 종료 월을 계산한다.
-4. FRED에 `WPU1017` 관측값을 요청한다.
-5. FRED 응답이 정상이라면 원본 JSON을 저장하고 월별 값을 파싱한다.
-6. ECOS에 월별 한국은행 기준금리를 요청한다.
-7. ECOS 응답이 정상이라면 원본 JSON을 저장하고 월별 값을 파싱한다.
-8. 두 데이터의 모든 월을 모아 시간 오름차순으로 정렬한다.
-9. 한쪽에만 있는 월은 다른 지표 칸을 비운다.
-10. 완성된 행을 임시 CSV에 쓴 뒤 기존 최종 CSV와 원자적으로 교체한다.
-11. 수집 건수와 생성된 파일 경로를 출력하고 종료한다.
+4. FRED에 `WPU1017`, `DFEDTARU`, `DFEDTARL` 관측값을 요청한다.
+5. 세 FRED 응답이 정상이라면 원본 JSON을 저장하고 월별 값을 파싱한다.
+6. 두 연준 시리즈의 월별 중간값을 계산한다.
+7. ECOS에 월별 한국은행 기준금리를 요청한다.
+8. ECOS 응답이 정상이라면 원본 JSON을 저장하고 월별 값을 파싱한다.
+9. 네 데이터의 모든 월을 모아 시간 오름차순으로 정렬한다.
+10. 한쪽에만 있는 월은 다른 지표 칸을 비운다.
+11. 완성된 행을 임시 CSV에 쓴 뒤 기존 최종 CSV와 원자적으로 교체한다.
+12. 수집 건수와 생성된 파일 경로를 출력하고 종료한다.
 
 사용자 출력 예시는 다음과 같다.
 
 ```text
-[1/4] API 키를 확인했습니다.
-[2/4] FRED 철강 PPI 60건을 수집했습니다.
-[3/4] ECOS 기준금리 60건을 수집했습니다.
-[4/4] 월별 CSV 60행을 저장했습니다.
+[1/6] API 키를 확인했습니다.
+[2/6] FRED 철강 PPI 60건을 수집했습니다.
+[3/6] FRED 연준 목표금리 상단 60건을 수집했습니다.
+[4/6] FRED 연준 목표금리 하단 60건을 수집했습니다.
+[5/6] ECOS 기준금리 60건을 수집했습니다.
+[6/6] 월별 CSV 60행을 저장했습니다.
 완료: data/processed/monthly_indicators.csv
 ```
 
@@ -187,6 +197,8 @@ ToSuhyeon/
 
 ```text
 data/raw/fred_WPU1017_20260730T013000Z.json
+data/raw/fred_DFEDTARU_20260730T013000Z.json
+data/raw/fred_DFEDTARL_20260730T013000Z.json
 data/raw/ecos_base_rate_20260730T013000Z.json
 ```
 
@@ -200,9 +212,9 @@ data/raw/ecos_base_rate_20260730T013000Z.json
 경로는 `data/processed/monthly_indicators.csv`로 고정한다.
 
 ```csv
-month,korea_base_rate_percent,us_steel_ppi_index
-2021-07,0.50,251.3
-2021-08,0.75,257.8
+month,korea_base_rate_percent,us_steel_ppi_index,us_fed_target_rate_percent
+2021-07,0.50,251.3,0.125
+2021-08,0.75,257.8,0.125
 ```
 
 - 인코딩은 Excel 호환성을 위해 `utf-8-sig`를 사용한다.
@@ -309,12 +321,12 @@ secret 입력란에 사용자가 직접 붙여넣는다.
 ```yaml
 on:
   schedule:
-    - cron: "0 11 * * 1"
+    - cron: "30 0 1 * *"
       timezone: "Asia/Seoul"
   workflow_dispatch:
 ```
 
-- 예약 목표는 매주 월요일 오전 11시 한국 시간이다.
+- 예약 목표는 매월 1일 오전 9시 30분 한국 시간이다.
 - GitHub 서버 부하에 따라 실제 시작은 몇 분 늦어질 수 있다.
 - `workflow_dispatch`는 예약 시간을 기다리지 않고 검증할 수 있는 수동
   실행 버튼을 만든다.
@@ -347,7 +359,7 @@ GitHub가 실행마다 제공하는 저장소 범위의 `GITHUB_TOKEN`으로 pus
 
 ### 자동 커밋
 
-- 커밋 메시지: `data: collect weekly indicators YYYY-MM-DD`
+- 커밋 메시지: `data: collect monthly indicators YYYY-MM-DD`
 - 커밋 대상: `data/raw/*.json`, `data/processed/monthly_indicators.csv`
 - 커밋 제외: 코드, 문서, `.env`, 기타 사용자 파일
 - 원본 JSON은 실행할 때마다 추가한다.
@@ -407,5 +419,5 @@ README에 다음 내용을 초보자 관점으로 추가한다.
   워크플로가 있다.
 - GitHub Actions secrets 두 개가 사용자에 의해 등록되어 있다.
 - `Run workflow` 수동 실행에서 테스트, 수집, 자동 커밋이 성공한다.
-- 예약 설정이 매주 월요일 오전 11시 `Asia/Seoul`을 사용한다.
+- 예약 설정이 매월 1일 오전 9시 30분 `Asia/Seoul`을 사용한다.
 - 자동 커밋에는 `data/raw`와 `data/processed` 파일만 포함된다.

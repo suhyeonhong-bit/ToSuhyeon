@@ -53,6 +53,7 @@ class StorageTests(unittest.TestCase):
                     "month": "2026-06",
                     "korea_base_rate_percent": "2.5",
                     "us_steel_ppi_index": "",
+                    "us_fed_target_rate_percent": "",
                 }
             ]
 
@@ -62,8 +63,8 @@ class StorageTests(unittest.TestCase):
             self.assertTrue(raw_bytes.startswith(codecs.BOM_UTF8))
             self.assertEqual(
                 raw_bytes.decode("utf-8-sig"),
-                "month,korea_base_rate_percent,us_steel_ppi_index\r\n"
-                "2026-06,2.5,\r\n",
+                "month,korea_base_rate_percent,us_steel_ppi_index,us_fed_target_rate_percent\r\n"
+                "2026-06,2.5,,\r\n",
             )
 
     def test_failed_replace_preserves_existing_csv(self):
@@ -83,6 +84,7 @@ class StorageTests(unittest.TestCase):
                                 "month": "2026-06",
                                 "korea_base_rate_percent": "2.5",
                                 "us_steel_ppi_index": "361.439",
+                                "us_fed_target_rate_percent": "",
                             }
                         ],
                     )

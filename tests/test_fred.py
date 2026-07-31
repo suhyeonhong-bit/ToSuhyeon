@@ -60,6 +60,23 @@ class FredTests(unittest.TestCase):
         self.assertEqual(payload["observations"][0]["date"], "2026-05-01")
         self.assertEqual(raw_text, fixture_bytes.decode("utf-8"))
 
+    def test_fetch_uses_requested_series_id(self):
+        captured = {}
+
+        def fake_opener(url, timeout):
+            captured["url"] = url
+            return FakeResponse(FIXTURE_PATH.read_bytes())
+
+        fetch_fred(
+            "fred-test-key",
+            self.date_range,
+            series_id="DFEDTARU",
+            opener=fake_opener,
+        )
+
+        query = parse_qs(urlparse(captured["url"]).query)
+        self.assertEqual(query["series_id"], ["DFEDTARU"])
+
     def test_parse_keeps_numeric_text_and_marks_dot_as_missing(self):
         payload = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))
 
