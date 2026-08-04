@@ -1,0 +1,3185 @@
+{
+  "energy": {
+    "henryHub": [
+      {
+        "kind": "actual",
+        "period": "2016",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 2.5149166667
+      },
+      {
+        "kind": "actual",
+        "period": "2017",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 2.9865
+      },
+      {
+        "kind": "actual",
+        "period": "2018",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 3.1664166667
+      },
+      {
+        "kind": "actual",
+        "period": "2019",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 2.5650833333
+      },
+      {
+        "kind": "actual",
+        "period": "2020",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 2.0333333333
+      },
+      {
+        "kind": "actual",
+        "period": "2021",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 3.9083333333
+      },
+      {
+        "kind": "actual",
+        "period": "2022",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 6.4183333333
+      },
+      {
+        "kind": "actual",
+        "period": "2023",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 2.5358333333
+      },
+      {
+        "kind": "actual",
+        "period": "2024",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 2.1933333333
+      },
+      {
+        "kind": "actual",
+        "period": "2025",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 3.5266666667
+      },
+      {
+        "kind": "forecast",
+        "period": "2026",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 3.6699643333
+      },
+      {
+        "kind": "forecast",
+        "period": "2027",
+        "source": "EIA STEO",
+        "unit": "dollars per million Btu",
+        "value": 3.4903939167
+      }
+    ],
+    "usDryGasProduction": [
+      {
+        "kind": "actual",
+        "period": "2016",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 72.656038251
+      },
+      {
+        "kind": "actual",
+        "period": "2017",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 74.90569589
+      },
+      {
+        "kind": "actual",
+        "period": "2018",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 84.313065753
+      },
+      {
+        "kind": "actual",
+        "period": "2019",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 92.874016438
+      },
+      {
+        "kind": "actual",
+        "period": "2020",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 92.380114754
+      },
+      {
+        "kind": "actual",
+        "period": "2021",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 94.600742466
+      },
+      {
+        "kind": "actual",
+        "period": "2022",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 99.328594521
+      },
+      {
+        "kind": "actual",
+        "period": "2023",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 103.15734795
+      },
+      {
+        "kind": "actual",
+        "period": "2024",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 103.07356557
+      },
+      {
+        "kind": "actual",
+        "period": "2025",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 107.65447397
+      },
+      {
+        "kind": "forecast",
+        "period": "2026",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 111.24731507
+      },
+      {
+        "kind": "forecast",
+        "period": "2027",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 115.30405808
+      }
+    ],
+    "usLngExports": [
+      {
+        "kind": "actual",
+        "period": "2016",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 0.51049440164
+      },
+      {
+        "kind": "actual",
+        "period": "2017",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 1.938471011
+      },
+      {
+        "kind": "actual",
+        "period": "2018",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 2.9674461699
+      },
+      {
+        "kind": "actual",
+        "period": "2019",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 4.9850602137
+      },
+      {
+        "kind": "actual",
+        "period": "2020",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 6.5299534399
+      },
+      {
+        "kind": "actual",
+        "period": "2021",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 9.7556656767
+      },
+      {
+        "kind": "actual",
+        "period": "2022",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 10.590803704
+      },
+      {
+        "kind": "actual",
+        "period": "2023",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 11.898703219
+      },
+      {
+        "kind": "actual",
+        "period": "2024",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 11.932158265
+      },
+      {
+        "kind": "actual",
+        "period": "2025",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 15.093106573
+      },
+      {
+        "kind": "forecast",
+        "period": "2026",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 17.411451378
+      },
+      {
+        "kind": "forecast",
+        "period": "2027",
+        "source": "EIA STEO",
+        "unit": "billion cubic feet per day",
+        "value": 18.614648909
+      }
+    ]
+  },
+  "generatedAt": "2026-08-04T05:27:21Z",
+  "sanctions": {
+    "watchlist": [
+      {
+        "eu": {
+          "listed": false,
+          "matches": []
+        },
+        "id": "novatek",
+        "label": "NOVATEK",
+        "ofac": {
+          "listed": false,
+          "matches": []
+        }
+      },
+      {
+        "eu": {
+          "listed": false,
+          "matches": []
+        },
+        "id": "yamal-lng",
+        "label": "Yamal LNG",
+        "ofac": {
+          "listed": false,
+          "matches": []
+        }
+      },
+      {
+        "eu": {
+          "listed": false,
+          "matches": []
+        },
+        "id": "leonid-mikhelson",
+        "label": "Leonid Mikhelson",
+        "ofac": {
+          "listed": false,
+          "matches": []
+        }
+      },
+      {
+        "eu": {
+          "listed": true,
+          "matches": [
+            {
+              "list": "EU Consolidated Financial Sanctions List",
+              "officialId": "EU.7536.45",
+              "officialName": "Gennady Nikolayevich TIMCHENKO",
+              "programs": [
+                "UKR"
+              ]
+            }
+          ]
+        },
+        "id": "gennady-timchenko",
+        "label": "Gennady Timchenko",
+        "ofac": {
+          "listed": true,
+          "matches": [
+            {
+              "list": "SDN",
+              "officialId": "16666",
+              "officialName": "TIMCHENKO, Gennady Nikolayevich",
+              "programs": [
+                "RUSSIA-EO14024",
+                "UKRAINE-EO13661"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "schemaVersion": 1,
+  "seaIce": {
+    "daily": [
+      {
+        "date": "2025-06-29",
+        "extent": 9.155,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-06-30",
+        "extent": 9.124,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-01",
+        "extent": 8.997,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-02",
+        "extent": 8.925,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-03",
+        "extent": 8.898,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-04",
+        "extent": 8.636,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-05",
+        "extent": 8.626,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-06",
+        "extent": 8.563,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-07",
+        "extent": 8.483,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-08",
+        "extent": 8.315,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-09",
+        "extent": 8.253,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-10",
+        "extent": 8.247,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-11",
+        "extent": 8.149,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-12",
+        "extent": 8.144,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-13",
+        "extent": 7.985,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-14",
+        "extent": 7.957,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-15",
+        "extent": 7.848,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-16",
+        "extent": 7.643,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-17",
+        "extent": 7.524,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-18",
+        "extent": 7.446,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-19",
+        "extent": 7.411,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-20",
+        "extent": 7.196,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-21",
+        "extent": 7.125,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-22",
+        "extent": 7.039,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-23",
+        "extent": 7.073,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-24",
+        "extent": 7.023,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-25",
+        "extent": 6.847,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-26",
+        "extent": 6.788,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-27",
+        "extent": 6.636,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-28",
+        "extent": 6.525,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-29",
+        "extent": 6.515,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-30",
+        "extent": 6.436,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-07-31",
+        "extent": 6.209,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-01",
+        "extent": 6.145,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-02",
+        "extent": 6.084,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-03",
+        "extent": 6.072,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-04",
+        "extent": 5.934,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-05",
+        "extent": 5.96,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-06",
+        "extent": 5.962,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-07",
+        "extent": 5.859,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-08",
+        "extent": 5.85,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-09",
+        "extent": 5.689,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-10",
+        "extent": 5.635,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-11",
+        "extent": 5.657,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-12",
+        "extent": 5.532,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-13",
+        "extent": 5.501,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-14",
+        "extent": 5.434,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-15",
+        "extent": 5.43,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-16",
+        "extent": 5.328,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-17",
+        "extent": 5.303,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-18",
+        "extent": 5.288,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-19",
+        "extent": 5.19,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-20",
+        "extent": 5.131,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-21",
+        "extent": 5.088,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-22",
+        "extent": 5.067,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-23",
+        "extent": 4.998,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-24",
+        "extent": 4.973,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-25",
+        "extent": 4.96,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-26",
+        "extent": 4.904,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-27",
+        "extent": 4.871,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-28",
+        "extent": 4.809,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-29",
+        "extent": 4.828,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-30",
+        "extent": 4.916,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-08-31",
+        "extent": 4.836,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-01",
+        "extent": 4.746,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-02",
+        "extent": 4.697,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-03",
+        "extent": 4.667,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-04",
+        "extent": 4.677,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-05",
+        "extent": 4.627,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-06",
+        "extent": 4.664,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-07",
+        "extent": 4.624,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-08",
+        "extent": 4.543,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-09",
+        "extent": 4.56,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-10",
+        "extent": 4.618,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-11",
+        "extent": 4.671,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-12",
+        "extent": 4.626,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-13",
+        "extent": 4.693,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-14",
+        "extent": 4.657,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-15",
+        "extent": 4.691,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-16",
+        "extent": 4.69,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-17",
+        "extent": 4.724,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-18",
+        "extent": 4.688,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-19",
+        "extent": 4.768,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-20",
+        "extent": 4.78,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-21",
+        "extent": 4.812,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-22",
+        "extent": 4.825,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-23",
+        "extent": 4.845,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-24",
+        "extent": 4.76,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-25",
+        "extent": 4.817,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-26",
+        "extent": 4.871,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-27",
+        "extent": 4.919,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-28",
+        "extent": 4.991,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-29",
+        "extent": 5.054,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-09-30",
+        "extent": 5.112,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-01",
+        "extent": 5.26,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-02",
+        "extent": 5.291,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-03",
+        "extent": 5.3,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-04",
+        "extent": 5.485,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-05",
+        "extent": 5.668,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-06",
+        "extent": 5.639,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-07",
+        "extent": 5.695,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-08",
+        "extent": 5.728,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-09",
+        "extent": 5.709,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-10",
+        "extent": 5.803,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-11",
+        "extent": 5.868,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-12",
+        "extent": 5.946,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-13",
+        "extent": 5.963,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-14",
+        "extent": 5.886,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-15",
+        "extent": 5.961,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-16",
+        "extent": 6.06,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-17",
+        "extent": 6.129,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-18",
+        "extent": 6.213,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-19",
+        "extent": 6.272,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-20",
+        "extent": 6.398,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-21",
+        "extent": 6.601,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-22",
+        "extent": 6.705,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-23",
+        "extent": 6.877,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-24",
+        "extent": 7.068,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-25",
+        "extent": 7.202,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-26",
+        "extent": 7.268,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-27",
+        "extent": 7.346,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-28",
+        "extent": 7.487,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-29",
+        "extent": 7.629,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-30",
+        "extent": 7.686,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-10-31",
+        "extent": 7.676,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-01",
+        "extent": 7.872,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-02",
+        "extent": 7.843,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-03",
+        "extent": 7.845,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-04",
+        "extent": 7.86,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-05",
+        "extent": 7.955,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-06",
+        "extent": 8.105,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-07",
+        "extent": 8.147,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-08",
+        "extent": 8.337,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-09",
+        "extent": 8.363,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-10",
+        "extent": 8.535,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-11",
+        "extent": 8.659,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-12",
+        "extent": 8.728,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-13",
+        "extent": 8.794,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-14",
+        "extent": 8.77,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-15",
+        "extent": 8.886,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-16",
+        "extent": 8.925,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-17",
+        "extent": 8.974,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-18",
+        "extent": 8.97,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-19",
+        "extent": 9.03,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-20",
+        "extent": 9.027,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-21",
+        "extent": 9.081,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-22",
+        "extent": 9.138,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-23",
+        "extent": 9.174,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-24",
+        "extent": 9.317,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-25",
+        "extent": 9.311,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-26",
+        "extent": 9.385,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-27",
+        "extent": 9.482,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-28",
+        "extent": 9.522,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-29",
+        "extent": 9.58,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-11-30",
+        "extent": 9.626,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-01",
+        "extent": 9.938,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-02",
+        "extent": 10.001,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-03",
+        "extent": 10.084,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-04",
+        "extent": 10.361,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-05",
+        "extent": 10.476,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-06",
+        "extent": 10.423,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-07",
+        "extent": 10.481,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-08",
+        "extent": 10.551,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-09",
+        "extent": 10.633,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-10",
+        "extent": 10.703,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-11",
+        "extent": 10.811,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-12",
+        "extent": 10.81,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-13",
+        "extent": 10.878,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-14",
+        "extent": 10.912,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-15",
+        "extent": 11.033,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-16",
+        "extent": 11.122,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-17",
+        "extent": 11.356,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-18",
+        "extent": 11.406,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-19",
+        "extent": 11.56,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-20",
+        "extent": 11.646,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-21",
+        "extent": 11.603,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-22",
+        "extent": 11.616,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-23",
+        "extent": 11.673,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-24",
+        "extent": 11.806,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-25",
+        "extent": 11.92,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-26",
+        "extent": 12.257,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-27",
+        "extent": 12.315,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-28",
+        "extent": 12.359,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-29",
+        "extent": 12.292,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-30",
+        "extent": 12.474,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2025-12-31",
+        "extent": 12.385,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-01",
+        "extent": 12.368,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-02",
+        "extent": 12.478,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-03",
+        "extent": 12.466,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-04",
+        "extent": 12.564,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-05",
+        "extent": 12.693,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-06",
+        "extent": 12.787,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-07",
+        "extent": 12.931,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-08",
+        "extent": 12.965,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-09",
+        "extent": 12.966,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-10",
+        "extent": 13.075,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-11",
+        "extent": 13.105,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-12",
+        "extent": 13.349,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-13",
+        "extent": 13.149,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-14",
+        "extent": 13.144,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-15",
+        "extent": 13.099,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-16",
+        "extent": 13.102,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-17",
+        "extent": 13.124,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-18",
+        "extent": 13.029,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-19",
+        "extent": 13.062,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-20",
+        "extent": 13.117,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-21",
+        "extent": 13.205,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-22",
+        "extent": 13.287,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-23",
+        "extent": 13.177,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-24",
+        "extent": 13.353,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-25",
+        "extent": 13.38,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-26",
+        "extent": 13.371,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-27",
+        "extent": 13.475,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-28",
+        "extent": 13.541,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-29",
+        "extent": 13.592,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-30",
+        "extent": 13.631,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-01-31",
+        "extent": 13.721,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-01",
+        "extent": 13.686,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-02",
+        "extent": 13.776,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-03",
+        "extent": 13.854,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-04",
+        "extent": 13.838,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-05",
+        "extent": 13.993,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-06",
+        "extent": 14.049,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-07",
+        "extent": 14.062,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-08",
+        "extent": 14.079,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-09",
+        "extent": 14.083,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-10",
+        "extent": 14.156,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-11",
+        "extent": 14.098,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-12",
+        "extent": 14.181,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-13",
+        "extent": 14.241,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-14",
+        "extent": 14.212,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-15",
+        "extent": 14.165,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-16",
+        "extent": 14.227,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-17",
+        "extent": 14.162,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-18",
+        "extent": 14.207,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-19",
+        "extent": 14.217,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-20",
+        "extent": 14.272,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-21",
+        "extent": 14.216,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-22",
+        "extent": 14.166,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-23",
+        "extent": 14.062,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-24",
+        "extent": 14.135,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-25",
+        "extent": 14.248,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-26",
+        "extent": 14.178,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-27",
+        "extent": 14.069,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-02-28",
+        "extent": 14.122,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-01",
+        "extent": 14.128,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-02",
+        "extent": 14.051,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-03",
+        "extent": 14.136,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-04",
+        "extent": 14.13,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-05",
+        "extent": 14.136,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-06",
+        "extent": 14.257,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-07",
+        "extent": 14.284,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-08",
+        "extent": 14.238,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-09",
+        "extent": 14.114,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-10",
+        "extent": 14.196,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-11",
+        "extent": 14.23,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-12",
+        "extent": 14.351,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-13",
+        "extent": 14.358,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-14",
+        "extent": 14.283,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-15",
+        "extent": 14.207,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-16",
+        "extent": 14.191,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-17",
+        "extent": 14.106,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-18",
+        "extent": 14.15,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-19",
+        "extent": 14.056,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-20",
+        "extent": 14.105,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-21",
+        "extent": 14.059,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-22",
+        "extent": 13.962,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-23",
+        "extent": 13.981,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-24",
+        "extent": 14.012,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-25",
+        "extent": 14.038,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-26",
+        "extent": 14.09,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-27",
+        "extent": 14.09,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-28",
+        "extent": 14.036,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-29",
+        "extent": 14.047,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-30",
+        "extent": 14.055,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-03-31",
+        "extent": 13.983,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-01",
+        "extent": 13.991,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-02",
+        "extent": 13.952,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-03",
+        "extent": 13.986,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-04",
+        "extent": 14.011,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-05",
+        "extent": 13.978,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-06",
+        "extent": 14.047,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-07",
+        "extent": 14.041,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-08",
+        "extent": 13.981,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-09",
+        "extent": 13.851,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-10",
+        "extent": 13.793,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-11",
+        "extent": 13.719,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-12",
+        "extent": 13.692,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-13",
+        "extent": 13.635,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-14",
+        "extent": 13.601,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-15",
+        "extent": 13.484,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-16",
+        "extent": 13.458,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-17",
+        "extent": 13.512,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-18",
+        "extent": 13.624,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-19",
+        "extent": 13.648,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-20",
+        "extent": 13.413,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-21",
+        "extent": 13.372,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-22",
+        "extent": 13.314,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-23",
+        "extent": 13.224,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-24",
+        "extent": 13.193,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-25",
+        "extent": 13.215,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-26",
+        "extent": 13.197,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-27",
+        "extent": 13.066,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-28",
+        "extent": 13.078,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-29",
+        "extent": 12.998,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-04-30",
+        "extent": 12.979,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-01",
+        "extent": 12.841,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-02",
+        "extent": 12.795,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-03",
+        "extent": 12.691,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-04",
+        "extent": 12.668,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-05",
+        "extent": 12.58,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-06",
+        "extent": 12.473,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-07",
+        "extent": 12.455,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-08",
+        "extent": 12.391,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-09",
+        "extent": 12.381,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-10",
+        "extent": 12.445,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-11",
+        "extent": 12.445,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-12",
+        "extent": 12.455,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-13",
+        "extent": 12.359,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-14",
+        "extent": 12.295,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-15",
+        "extent": 12.267,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-16",
+        "extent": 12.244,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-17",
+        "extent": 12.192,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-18",
+        "extent": 12.019,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-19",
+        "extent": 12.036,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-20",
+        "extent": 11.861,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-21",
+        "extent": 11.902,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-22",
+        "extent": 11.794,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-23",
+        "extent": 11.79,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-24",
+        "extent": 11.703,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-25",
+        "extent": 11.72,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-26",
+        "extent": 11.771,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-27",
+        "extent": 11.638,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-28",
+        "extent": 11.586,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-29",
+        "extent": 11.57,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-30",
+        "extent": 11.535,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-05-31",
+        "extent": 11.439,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-01",
+        "extent": 11.359,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-02",
+        "extent": 11.285,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-03",
+        "extent": 11.227,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-04",
+        "extent": 11.18,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-05",
+        "extent": 11.077,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-06",
+        "extent": 11.048,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-07",
+        "extent": 10.998,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-08",
+        "extent": 10.97,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-09",
+        "extent": 10.884,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-10",
+        "extent": 10.793,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-11",
+        "extent": 10.759,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-12",
+        "extent": 10.62,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-13",
+        "extent": 10.644,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-14",
+        "extent": 10.648,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-15",
+        "extent": 10.57,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-16",
+        "extent": 10.452,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-17",
+        "extent": 10.368,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-18",
+        "extent": 10.374,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-19",
+        "extent": 10.234,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-20",
+        "extent": 10.18,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-21",
+        "extent": 10.108,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-22",
+        "extent": 10.112,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-23",
+        "extent": 10.058,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-24",
+        "extent": 9.982,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-25",
+        "extent": 9.764,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-26",
+        "extent": 9.555,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-27",
+        "extent": 9.576,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-28",
+        "extent": 9.48,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-29",
+        "extent": 9.262,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-06-30",
+        "extent": 9.103,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-01",
+        "extent": 9.034,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-02",
+        "extent": 8.933,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-03",
+        "extent": 8.836,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-04",
+        "extent": 8.773,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-05",
+        "extent": 8.738,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-06",
+        "extent": 8.671,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-07",
+        "extent": 8.541,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-08",
+        "extent": 8.528,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-09",
+        "extent": 8.429,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-10",
+        "extent": 8.376,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-11",
+        "extent": 8.255,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-12",
+        "extent": 8.141,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-13",
+        "extent": 8.04,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-14",
+        "extent": 7.964,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-15",
+        "extent": 7.883,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-16",
+        "extent": 7.691,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-17",
+        "extent": 7.576,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-18",
+        "extent": 7.416,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-19",
+        "extent": 7.316,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-20",
+        "extent": 7.279,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-21",
+        "extent": 7.146,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-22",
+        "extent": 7.111,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-23",
+        "extent": 7.029,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-24",
+        "extent": 6.972,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-25",
+        "extent": 6.832,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-26",
+        "extent": 6.787,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-27",
+        "extent": 6.683,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-28",
+        "extent": 6.565,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-29",
+        "extent": 6.544,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-30",
+        "extent": 6.507,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-07-31",
+        "extent": 6.526,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-08-01",
+        "extent": 6.495,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-08-02",
+        "extent": 6.479,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      }
+    ],
+    "latest": {
+      "date": "2026-08-02",
+      "extent": 6.479,
+      "missing": 0.0,
+      "source": "NSIDC Sea Ice Index v4",
+      "unit": "10^6 sq km"
+    }
+  },
+  "sources": {
+    "eia": {
+      "contentHash": "sha256:e68d93bf8d021966489276809f8063947db5a1a89b29adf43d7425b33c6c2eb1",
+      "dataThrough": "2027",
+      "edition": "2026-08",
+      "hasData": true,
+      "lastAttemptAt": "2026-08-04T05:26:16Z",
+      "lastSuccessAt": "2026-08-04T05:26:16Z",
+      "status": "fresh",
+      "url": "https://www.eia.gov/outlooks/steo/"
+    },
+    "eu": {
+      "contentHash": "sha256:094fa61d2766d3dc9c0752dd3aedc09cd1401a068e11e3f4a0901a272da968d1",
+      "dataThrough": "2026-07-31",
+      "hasData": true,
+      "lastAttemptAt": "2026-08-04T05:27:21Z",
+      "lastSuccessAt": "2026-08-04T05:27:21Z",
+      "status": "fresh",
+      "url": "https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions?locale=en"
+    },
+    "nsidc": {
+      "contentHash": "sha256:ad8f8a7a9e4384a0107a13933b551228eacf0f55c1aa653e12d4b2d230dcdcef",
+      "dataThrough": "2026-08-02",
+      "hasData": true,
+      "lastAttemptAt": "2026-08-04T05:27:21Z",
+      "lastSuccessAt": "2026-08-04T05:27:21Z",
+      "status": "fresh",
+      "url": "https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv"
+    },
+    "ofac": {
+      "contentHash": "sha256:42ac662c72d2a5337a9d0d8fb2d213bec86c35e20d01b5447d2bcc22fa71c4ae",
+      "dataThrough": "2026-08-04",
+      "hasData": true,
+      "lastAttemptAt": "2026-08-04T05:27:21Z",
+      "lastSuccessAt": "2026-08-04T05:27:21Z",
+      "status": "fresh",
+      "url": "https://ofac.treasury.gov/sanctions-list-service"
+    }
+  }
+}

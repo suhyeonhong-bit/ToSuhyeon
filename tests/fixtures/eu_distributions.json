@@ -1,0 +1,10 @@
+{
+  "@graph": [
+    {
+      "@id": "distribution-csv-1-1",
+      "dct:format": {"@id": "http://publications.europa.eu/resource/authority/file-type/CSV"},
+      "dct:title": [{"@language": "en", "@value": "Consolidated Financial Sanctions File 1.1"}],
+      "dcat:downloadURL": {"@id": "https://webgate.ec.europa.eu/safe-tokenized-download"}
+    }
+  ]
+}
