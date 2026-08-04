@@ -33,6 +33,11 @@ class SanctionsTests(unittest.TestCase):
         self.assertEqual(matches["novatek"][0]["officialName"], "PAO NOVATEK")
         self.assertEqual(matches["yamal-lng"][0]["officialName"], "YAMAL LNG JSC")
 
+    def test_ofac_accepts_the_official_trailing_dos_eof_marker(self):
+        text = (FIXTURES / "ofac_sdn.csv").read_text(encoding="utf-8") + "\x1a\n"
+        matches = parse_ofac_csv(text, "SDN")
+        self.assertEqual(len(matches["gennady-timchenko"]), 1)
+
     def test_eu_deduplicates_rows_and_avoids_similar_names(self):
         matches, data_through = parse_eu_csv(
             (FIXTURES / "eu_sanctions.csv").read_text(encoding="utf-8-sig")

@@ -97,6 +97,8 @@ def parse_ofac_csv(
         for row in rows:
             if not row:
                 continue
+            if len(row) == 1 and row[0].strip() == "\x1a":
+                continue
             if len(row) < 4:
                 raise _format_error("ofac")
             official_id, official_name, _entity_type, program = row[:4]
