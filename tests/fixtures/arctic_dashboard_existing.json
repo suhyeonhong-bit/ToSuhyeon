@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-03T00:00:00Z",
+  "sources": {
+    "eia": {"status": "fresh", "hasData": true, "lastAttemptAt": "2026-08-03T00:00:00Z", "lastSuccessAt": "2026-08-03T00:00:00Z", "dataThrough": "2027", "url": "https://www.eia.gov/outlooks/steo/", "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "edition": "2026-08"},
+    "ofac": {"status": "fresh", "hasData": true, "lastAttemptAt": "2026-08-03T00:00:00Z", "lastSuccessAt": "2026-08-03T00:00:00Z", "dataThrough": "2026-08-03", "url": "https://ofac.treasury.gov/sanctions-list-service", "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+    "eu": {"status": "fresh", "hasData": true, "lastAttemptAt": "2026-08-03T00:00:00Z", "lastSuccessAt": "2026-08-03T00:00:00Z", "dataThrough": "2026-07-31", "url": "https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions?locale=en", "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"},
+    "nsidc": {"status": "fresh", "hasData": true, "lastAttemptAt": "2026-08-03T00:00:00Z", "lastSuccessAt": "2026-08-03T00:00:00Z", "dataThrough": "2026-08-01", "url": "https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv", "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}
+  },
+  "energy": {
+    "usLngExports": [{"period": "2025", "value": 15.0, "unit": "billion cubic feet per day", "kind": "actual", "source": "EIA STEO"}],
+    "usDryGasProduction": [{"period": "2025", "value": 105.9, "unit": "billion cubic feet per day", "kind": "actual", "source": "EIA STEO"}],
+    "henryHub": [{"period": "2025", "value": 3.53, "unit": "dollars per million Btu", "kind": "actual", "source": "EIA STEO"}]
+  },
+  "sanctions": {
+    "watchlist": [
+      {"id": "novatek", "label": "NOVATEK", "ofac": {"listed": false, "matches": []}, "eu": {"listed": false, "matches": []}},
+      {"id": "yamal-lng", "label": "Yamal LNG", "ofac": {"listed": false, "matches": []}, "eu": {"listed": false, "matches": []}},
+      {"id": "leonid-mikhelson", "label": "Leonid Mikhelson", "ofac": {"listed": false, "matches": []}, "eu": {"listed": true, "matches": [{"officialName": "Leonid Viktorovich MIKHELSON", "list": "EU Consolidated Financial Sanctions List", "programs": ["UKR"], "officialId": "EU.8000.1"}]}},
+      {"id": "gennady-timchenko", "label": "Gennady Timchenko", "ofac": {"listed": true, "matches": [{"officialName": "TIMCHENKO, Gennady Nikolayevich", "list": "SDN", "programs": ["RUSSIA-EO14024"], "officialId": "16666"}]}, "eu": {"listed": true, "matches": [{"officialName": "Gennady Nikolayevich TIMCHENKO", "list": "EU Consolidated Financial Sanctions List", "programs": ["UKR"], "officialId": "EU.7536.45"}]}}
+    ]
+  },
+  "seaIce": {
+    "latest": {"date": "2026-08-01", "extent": 6.2, "unit": "10^6 sq km", "missing": 0.0, "source": "NSIDC Sea Ice Index v4"},
+    "daily": [{"date": "2026-08-01", "extent": 6.2, "unit": "10^6 sq km", "missing": 0.0, "source": "NSIDC Sea Ice Index v4"}]
+  }
+}

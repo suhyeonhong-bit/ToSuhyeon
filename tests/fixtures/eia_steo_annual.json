@@ -1,0 +1,18 @@
+{
+  "response": {
+    "data": [
+      {"period": "2016", "seriesId": "NGEXPUS_LNG", "seriesDescription": "Natural Gas LNG Gross Exports", "value": "0.5", "unit": "billion cubic feet per day"},
+      {"period": "2025", "seriesId": "NGEXPUS_LNG", "seriesDescription": "Natural Gas LNG Gross Exports", "value": "15.0", "unit": "billion cubic feet per day"},
+      {"period": "2026", "seriesId": "NGEXPUS_LNG", "seriesDescription": "Natural Gas LNG Gross Exports", "value": "17.5", "unit": "billion cubic feet per day"},
+      {"period": "2027", "seriesId": "NGEXPUS_LNG", "seriesDescription": "Natural Gas LNG Gross Exports", "value": "18.1", "unit": "billion cubic feet per day"},
+      {"period": "2016", "seriesId": "NGPRPUS", "seriesDescription": "Natural Gas Total Dry Production", "value": "72.3", "unit": "billion cubic feet per day"},
+      {"period": "2025", "seriesId": "NGPRPUS", "seriesDescription": "Natural Gas Total Dry Production", "value": "105.9", "unit": "billion cubic feet per day"},
+      {"period": "2026", "seriesId": "NGPRPUS", "seriesDescription": "Natural Gas Total Dry Production", "value": "107.2", "unit": "billion cubic feet per day"},
+      {"period": "2027", "seriesId": "NGPRPUS", "seriesDescription": "Natural Gas Total Dry Production", "value": "108.0", "unit": "billion cubic feet per day"},
+      {"period": "2016", "seriesId": "NGHHUUS", "seriesDescription": "Natural Gas Henry Hub Spot Price", "value": "2.52", "unit": "dollars per million Btu"},
+      {"period": "2025", "seriesId": "NGHHUUS", "seriesDescription": "Natural Gas Henry Hub Spot Price", "value": "3.53", "unit": "dollars per million Btu"},
+      {"period": "2026", "seriesId": "NGHHUUS", "seriesDescription": "Natural Gas Henry Hub Spot Price", "value": "4.10", "unit": "dollars per million Btu"},
+      {"period": "2027", "seriesId": "NGHHUUS", "seriesDescription": "Natural Gas Henry Hub Spot Price", "value": "4.25", "unit": "dollars per million Btu"}
+    ]
+  }
+}

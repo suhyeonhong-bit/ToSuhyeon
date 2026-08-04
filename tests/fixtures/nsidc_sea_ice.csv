@@ -1,0 +1,5 @@
+Year, Month, Day,     Extent,    Missing, Source Data
+YYYY,    MM,  DD, 10^6 sq km, 10^6 sq km, Source data product web sites: http://nsidc.org/data/nsidc-0081.html and http://nsidc.org/data/nsidc-0051.html
+2025,    12,  31,     12.100,      0.000, source-a
+2026,    01,  01,     12.200,      0.010, source-b
+2026,    08,  02,      6.123,      0.000, source-c
