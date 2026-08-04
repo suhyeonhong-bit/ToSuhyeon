@@ -221,3 +221,60 @@ secret 값은 다시 화면에 표시되지 않습니다.
   있는지 확인합니다.
 - 최신 월이 빈칸: 기관의 발표 시차일 수 있으므로 다음 실행에서 다시
   확인합니다.
+
+## 북극 에너지 연구 대시보드 데이터
+
+북극 에너지 연구 화면은 기존 철강·금리 CSV와 별도로 다음 공식 자료를
+자동 수집합니다.
+
+- EIA STEO: 미국 LNG 수출, 미국 건성 천연가스 생산, Henry Hub 가격
+- OFAC SDN·Non-SDN: NOVATEK, Yamal LNG, Leonid Mikhelson, Gennady
+  Timchenko의 공식 명단 직접 등재 여부
+- EU Consolidated Financial Sanctions List: 같은 감시 대상의 직접 등재 여부
+- NSIDC Sea Ice Index: 북극 전체 일별 해빙 면적
+
+화면용 공개 파일은
+`data/processed/arctic_dashboard.json` 하나입니다. GitHub의 원본 주소는
+`https://raw.githubusercontent.com/suhyeonhong-bit/ToSuhyeon/main/data/processed/arctic_dashboard.json`입니다.
+전체 제재 명단이나 API 키는 이 파일에 저장하지 않습니다.
+
+### 로컬 키와 실행 방법
+
+EIA를 실행할 때만 이 저장소의 `.env`에 다음 한 줄이 필요합니다.
+
+```text
+EIA_API_KEY=<직접 발급받은 키>
+```
+
+따옴표나 공백을 넣지 마세요. 이 키는 ToSuhyeon의 로컬 `.env`와 GitHub
+Actions secret에만 두며 SteelSignal 저장소, `VITE_`, `NEXT_PUBLIC_` 환경
+변수에는 넣지 않습니다. OFAC·EU·NSIDC 일별 수집에는 키가 필요 없습니다.
+
+```bash
+python3 collect_arctic_data.py --group eia
+python3 collect_arctic_data.py --group daily
+python3 collect_arctic_data.py --group all
+```
+
+EIA 그룹은 매월 15일 오전 9시 30분, 일별 그룹은 매일 오전 9시 10분
+한국 시간에 실행됩니다. 두 작업은 같은 동시 실행 그룹을 사용하므로 공개
+JSON을 동시에 덮어쓰지 않습니다. Actions 화면의 `Run workflow`로 각각
+즉시 실행할 수도 있습니다.
+
+### 자동 데이터와 연구 해석의 경계
+
+자동화가 바꾸는 것은 공식 수치, 직접 등재 결과, 출처 기준일과 갱신 상태뿐입니다.
+패권 지수, 4A 비교, 기업 계약 해석, 한국 전략 제언은 연구자가 작성한
+내용이므로 API가 자동으로 결론을 다시 쓰지 않습니다.
+
+제재 결과는 공식 명단의 **직접 등재 여부**만 확인합니다. OFAC 50% 룰,
+실질 소유관계, 제재 회피나 법률 위반 여부를 판단하지 않으며 법률 자문이
+아닙니다. NSIDC 값은 **북극 전체 해빙 면적**이며 NSR 실제 항행 가능
+일수와 같지 않습니다.
+
+공식 출처:
+
+- [EIA Open Data](https://www.eia.gov/opendata/) 및 [STEO](https://www.eia.gov/outlooks/steo/)
+- [OFAC Sanctions List Service](https://ofac.treasury.gov/sanctions-list-service)
+- [EU Consolidated Financial Sanctions List](https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions?locale=en)
+- [NSIDC Sea Ice Index daily CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)

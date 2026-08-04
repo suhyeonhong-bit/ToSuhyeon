@@ -1,0 +1,48 @@
+name: Collect monthly Arctic energy data
+
+on:
+  schedule:
+    - cron: "30 9 15 * *"
+      timezone: "Asia/Seoul"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: arctic-dashboard-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.9"
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Collect EIA STEO data
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+        run: python3 collect_arctic_data.py --group eia
+      - name: Commit generated dashboard data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/processed/arctic_dashboard.json
+          if git diff --cached --quiet; then
+            echo "No Arctic energy data changed."
+            exit 0
+          fi
+          git commit -m "data: refresh monthly arctic energy $(date -u +'%Y-%m-%d')"
+          git pull --rebase origin main
+          git push origin HEAD:main
