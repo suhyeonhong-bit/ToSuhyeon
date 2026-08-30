@@ -259,7 +259,7 @@
       }
     ]
   },
-  "generatedAt": "2026-08-29T06:59:12Z",
+  "generatedAt": "2026-08-30T05:17:12Z",
   "sanctions": {
     "watchlist": [
       {
@@ -3158,8 +3158,8 @@
       "contentHash": "sha256:049cb95cf55cd9a77dfb8d3fed21eb61a541e4c46f80d1f1b581f2e537e0f015",
       "dataThrough": "2026-08-05",
       "hasData": true,
-      "lastAttemptAt": "2026-08-29T06:59:12Z",
-      "lastSuccessAt": "2026-08-29T06:59:12Z",
+      "lastAttemptAt": "2026-08-30T05:17:12Z",
+      "lastSuccessAt": "2026-08-30T05:17:12Z",
       "status": "fresh",
       "url": "https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions?locale=en"
     },
@@ -3167,17 +3167,17 @@
       "contentHash": "sha256:1be54e3da75ff63d6e01812b43caa93d7c82ca418ca4df215c9ede402d2a068a",
       "dataThrough": "2026-08-27",
       "hasData": true,
-      "lastAttemptAt": "2026-08-29T06:59:12Z",
+      "lastAttemptAt": "2026-08-30T05:17:12Z",
       "lastSuccessAt": "2026-08-29T06:59:12Z",
-      "status": "fresh",
+      "status": "stale",
       "url": "https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv"
     },
     "ofac": {
       "contentHash": "sha256:2c912a70b95665fbcc7bfb9061ba01aff1c9c23b2d2b1a8b6f4b969838c3182d",
-      "dataThrough": "2026-08-29",
+      "dataThrough": "2026-08-30",
       "hasData": true,
-      "lastAttemptAt": "2026-08-29T06:59:12Z",
-      "lastSuccessAt": "2026-08-29T06:59:12Z",
+      "lastAttemptAt": "2026-08-30T05:17:12Z",
+      "lastSuccessAt": "2026-08-30T05:17:12Z",
       "status": "fresh",
       "url": "https://ofac.treasury.gov/sanctions-list-service"
     }
