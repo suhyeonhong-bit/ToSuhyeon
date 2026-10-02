@@ -259,7 +259,7 @@
       }
     ]
   },
-  "generatedAt": "2026-10-01T05:42:30Z",
+  "generatedAt": "2026-10-02T05:26:46Z",
   "sanctions": {
     "watchlist": [
       {
@@ -334,13 +334,6 @@
   "schemaVersion": 1,
   "seaIce": {
     "daily": [
-      {
-        "date": "2025-08-26",
-        "extent": 4.904,
-        "missing": 0.0,
-        "source": "NSIDC Sea Ice Index v4",
-        "unit": "10^6 sq km"
-      },
       {
         "date": "2025-08-27",
         "extent": 4.871,
@@ -3129,15 +3122,22 @@
       },
       {
         "date": "2026-09-29",
-        "extent": 5.337,
+        "extent": 5.378,
+        "missing": 0.0,
+        "source": "NSIDC Sea Ice Index v4",
+        "unit": "10^6 sq km"
+      },
+      {
+        "date": "2026-09-30",
+        "extent": 5.478,
         "missing": 0.0,
         "source": "NSIDC Sea Ice Index v4",
         "unit": "10^6 sq km"
       }
     ],
     "latest": {
-      "date": "2026-09-29",
-      "extent": 5.337,
+      "date": "2026-09-30",
+      "extent": 5.478,
       "missing": 0.0,
       "source": "NSIDC Sea Ice Index v4",
       "unit": "10^6 sq km"
@@ -3158,26 +3158,26 @@
       "contentHash": "sha256:ba8fbd1b114e7b1a73a11004f440c397ec331b6892c683293d6ba848a59864ef",
       "dataThrough": "2026-09-22",
       "hasData": true,
-      "lastAttemptAt": "2026-10-01T05:42:30Z",
+      "lastAttemptAt": "2026-10-02T05:26:46Z",
       "lastSuccessAt": "2026-10-01T05:42:30Z",
-      "status": "fresh",
+      "status": "stale",
       "url": "https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions?locale=en"
     },
     "nsidc": {
-      "contentHash": "sha256:2572340afd8bf9584c3a3292998e81a80bf2f9e34393a60bc35f094d71198bc9",
-      "dataThrough": "2026-09-29",
+      "contentHash": "sha256:6196d6f6f284bdd3a7c04fdf5c738afb4725be987975260306ad49233c5274e0",
+      "dataThrough": "2026-09-30",
       "hasData": true,
-      "lastAttemptAt": "2026-10-01T05:42:30Z",
-      "lastSuccessAt": "2026-10-01T05:42:30Z",
+      "lastAttemptAt": "2026-10-02T05:26:46Z",
+      "lastSuccessAt": "2026-10-02T05:26:46Z",
       "status": "fresh",
       "url": "https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv"
     },
     "ofac": {
-      "contentHash": "sha256:db3b4c783559cb14073030aa2cf633f2cf96f02830f342073d951a38c4dadd92",
-      "dataThrough": "2026-10-01",
+      "contentHash": "sha256:1a5816487b9d9fcc0413abb2d36c4d554e60697326f02e17b756937ae4dc5f07",
+      "dataThrough": "2026-10-02",
       "hasData": true,
-      "lastAttemptAt": "2026-10-01T05:42:30Z",
-      "lastSuccessAt": "2026-10-01T05:42:30Z",
+      "lastAttemptAt": "2026-10-02T05:26:46Z",
+      "lastSuccessAt": "2026-10-02T05:26:46Z",
       "status": "fresh",
       "url": "https://ofac.treasury.gov/sanctions-list-service"
     }
